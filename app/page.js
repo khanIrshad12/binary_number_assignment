@@ -1,10 +1,10 @@
-import Selectdepart from '@/components/Selectdepartment'
+import Ismounted from '@/components/Ismounted'
 import React from 'react'
 
 const Home = () => {
   return (
     <div>
-    <Selectdepart/>
+    <Ismounted/>
     </div>
   )
 }

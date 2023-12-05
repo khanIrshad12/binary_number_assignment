@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { FormatDate } from '@/components/FormatDate';
 import useAuth from '@/hooks/useAuth';
 
@@ -10,7 +10,7 @@ const CustomerTransactions = () => {
   let { id } = useParams()
   const [transactions, setTransactions] = useState([]);
   const [userName, setUserName] = useState("")
-
+  const router =useRouter()
   useEffect(() => {
     if (isAuthenticated) {
       fetchCustomerTransactions();
